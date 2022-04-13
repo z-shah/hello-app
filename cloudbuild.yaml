@@ -25,7 +25,6 @@ steps:
     - '-t'
     - 'australia-southeast1-docker.pkg.dev/gke-demo-347012/hello-app:1.0'
     - '.'
-  dir: 'hello-app'
 
 # Create back-up of main.go and replace "Version: 1.0.0" with "Version: 2.0.0".
 - name: 'bash'
@@ -40,7 +39,6 @@ steps:
     - '-t'
     - 'australia-southeast1-docker.pkg.dev/gke-demo-347012/hello-app:2.0'
     - '.'
-  dir: 'hello-app'
 
 # Push images.
 images:
