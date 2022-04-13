@@ -30,7 +30,7 @@ steps:
 - name: 'bash'
   args:
     - '-c'
-    - 'cp -p hello-app/main.go hello-app/main.go.bak && sed "s/Version: 1.0.0/Version: 2.0.0/g" hello-app/main.go.bak > hello-app/main.go'
+    - 'cp -p main.go main.go.bak && sed "s/Version: 1.0.0/Version: 2.0.0/g" main.go.bak > main.go'
 
 # Build hello-app:2.0.
 - name: 'gcr.io/cloud-builders/docker'
