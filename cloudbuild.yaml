@@ -46,3 +46,6 @@ steps:
 images:
   - 'australia-southeast1-docker.pkg.dev/gke-demo-347012/hello-app:1.0'
   - 'australia-southeast1-docker.pkg.dev/gke-demo-347012/hello-app:2.0'
+
+options:
+ logging: CLOUD_LOGGING_ONLY
