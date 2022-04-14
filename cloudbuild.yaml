@@ -10,7 +10,7 @@ steps:
 
 # Push images.
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', '${_LOCATION}/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA']
+  args: ['push', '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA']
 
 
 # Create release in Google Cloud Deploy
