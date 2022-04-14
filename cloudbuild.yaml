@@ -22,7 +22,7 @@ steps:
       "--delivery-pipeline", "hello-app",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
-      "--images", "IMAGE_NAME={_LOCATION}/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA"]
+      "--images", "IMAGE_NAME=${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:$SHORT_SHA"]
 
 options:
  logging: CLOUD_LOGGING_ONLY
