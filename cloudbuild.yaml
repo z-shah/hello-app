@@ -23,27 +23,12 @@ steps:
   args:
     - 'build'
     - '-t'
-    - 'australia-southeast1-docker.pkg.dev/gke-demo-347012/hello-app:1.0'
-    - '.'
-
-# Create back-up of main.go and replace "Version: 1.0.0" with "Version: 2.0.0".
-- name: 'bash'
-  args:
-    - '-c'
-    - 'cp -p main.go main.go.bak && sed "s/Version: 1.0.0/Version: 2.0.0/g" main.go.bak > main.go'
-
-# Build hello-app:2.0.
-- name: 'gcr.io/cloud-builders/docker'
-  args:
-    - 'build'
-    - '-t'
-    - 'australia-southeast1-docker.pkg.dev/gke-demo-347012/hello-app:2.0'
+    - '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}'
     - '.'
 
 # Push images.
 images:
-  - 'australia-southeast1-docker.pkg.dev/gke-demo-347012/hello-app:1.0'
-  - 'australia-southeast1-docker.pkg.dev/gke-demo-347012/hello-app:2.0'
+  - '{_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}'
 
 options:
  logging: CLOUD_LOGGING_ONLY
