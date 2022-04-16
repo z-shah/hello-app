@@ -19,4 +19,4 @@ test:
 
 deploy:
   kubectl:
-    manifests: ["manifests/helloweb-deployment.yaml"]
+    manifests: ["manifests/helloweb-deployment.yaml", "manifests/helloweb-service-lb.yaml"]
