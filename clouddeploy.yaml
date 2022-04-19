@@ -26,5 +26,6 @@ kind: Target
 metadata:
  name: prod
 description: production cluster
+requireApproval: true
 gke:
  cluster: projects/gke-demo-347012/locations/australia-southeast1/clusters/prod-cluster

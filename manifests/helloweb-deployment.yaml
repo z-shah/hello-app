@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: hello-app
-        image: australia-southeast1-docker.pkg.dev/gke-demo-347012/demo/hello-app
+        image: hello-app
         ports:
         - containerPort: 8080
         resources:
