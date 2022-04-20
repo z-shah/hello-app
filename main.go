@@ -47,7 +47,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 	host, _ := os.Hostname()
 	fmt.Fprintf(w, "Hello, world!\n")
 	fmt.Fprintf(w, "This is the new version!!!\n")
-	fmt.Fprintf(w, "Version: 2.0.0\n")
+	fmt.Fprintf(w, "Version: 3.0.0\n")
 	fmt.Fprintf(w, "Hostname: %s\n", host)
 }
 
