@@ -39,7 +39,11 @@ spec:
         - containerPort: 8080
         resources:
           requests:
-            cpu: 200m
+            cpu: 70m
+            memory: 64Mi
+          limits:
+            cpu: 125m
+            memory: 128Mi
 # [END container_helloapp_deployment]
 # [END gke_manifests_helloweb_deployment_deployment_helloweb]
 ---
