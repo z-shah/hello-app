@@ -4,7 +4,7 @@ metadata:
   name: hello-app
 build:
   artifacts:
-  - image: australia-southeast1-docker.pkg.dev/gke-demo-347012/demo/hello-app
+  - image: hello-app
     docker:
       cacheFrom:
       # Local Docker builder replaces cache references to the artifact image with
@@ -12,11 +12,7 @@ build:
       - australia-southeast1-docker.pkg.dev/gke-demo-347012/demo/hello-app
   local: {}
 
-test:
-  - image: australia-southeast1-docker.pkg.dev/gke-demo-347012/demo/hello-app
-    structureTests:
-      - './container-structure-test/*'
-
 deploy:
   kubectl:
-    manifests: ["manifests/helloweb-deployment.yaml", "manifests/helloweb-service-lb.yaml"]
+    manifests: 
+    - manifests/helloweb-deployment.yaml
